@@ -66,7 +66,7 @@ export const SITE = {
     {
       title: "Compartir sin presión",
       description:
-        "Si querés contar, contás. Si no, también está bien. La escucha es la base de todo.",
+        "Si querés contar, hay espacio. Si no, está bien quedarse contigo.",
     },
     {
       title: "Te llevás un recuerdo",
@@ -77,7 +77,7 @@ export const SITE = {
 
   // Para quién es — el perfil core del modelo de negocio
   audience: [
-    "Personas que sienten que llevan mucho tiempo pensando y poco tiempo sintiendo.",
+    "Personas que llevan mucho tiempo pensando y poco sintiendo.",
     "Personas que quieren un espacio sin juicios, sin consejos no pedidos, sin prisa.",
     "Curiosas del journaling, el scrapbook, la escritura creativa — incluso si nunca lo intentaron.",
     "Las que necesitan un espacio para sí mismas, sin roles, sin tareas.",
