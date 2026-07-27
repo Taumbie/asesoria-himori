@@ -43,7 +43,7 @@ export function ProximosEncuentros() {
                     <p className="text-xs uppercase tracking-eyebrow text-cream/70">
                       Cuándo
                     </p>
-                    <p className="mt-1 font-serif text-xl">{next.date}</p>
+                    <p className="mt-1 font-serif text-xl">{next.fullDate}</p>
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ export function ProximosEncuentros() {
                     variant="ghost"
                     className="border-cream text-cream hover:bg-cream hover:text-terracotta-dark"
                   >
-                    Escribir a @psicoisi
+                    Seguir a @psicoisi
                     <ArrowUpRight
                       className="h-5 w-5"
                       strokeWidth={1.5}

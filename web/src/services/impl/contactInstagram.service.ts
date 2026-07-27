@@ -26,6 +26,6 @@ export const contactInstagramService: ContactService = {
   },
 
   getCallToActionText() {
-    return "Enviar DM con la palabra HORA";
+    return "Seguir a @psicoisi";
   },
 };

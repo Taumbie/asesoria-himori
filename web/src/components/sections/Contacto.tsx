@@ -1,20 +1,19 @@
 // src/components/sections/Contacto.tsx
-// Sección final: cierre editorial + CTA explícito al DM.
-// El "form" no envía datos — en su lugar guía al usuario a ManyChat.
-// Esto se ve más honesto que un form que recibe un POST sin respuesta.
+// Sección final: cierre editorial + CTA explícito al Instagram de @psicoisi.
+// Sin ManyChat ni palabras clave. La conversión es: landing → seguir en IG → DM.
 
 "use client";
 
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Instagram } from "lucide-react";
 import { SITE } from "@/content/site";
 import { useContactService } from "@/services/ServicesContext";
 
 export function Contacto() {
   const contact = useContactService();
-  const url = contact.buildInstagramDmUrl(SITE.primaryCTA.keyword);
+  const url = contact.buildInstagramDmUrl("");
 
   return (
     <section
@@ -28,29 +27,24 @@ export function Contacto() {
 
         <Reveal delay={100}>
           <h2 className="mt-6 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-            Escribime.{" "}
-            <em className="font-normal italic text-terracotta">
-              Con esa palabra basta.
-            </em>
+            Encuéntranos en{" "}
+            <em className="font-normal italic text-terracotta">@psicoisi</em>.
           </h2>
         </Reveal>
 
         <Reveal delay={200}>
           <p className="mt-8 font-serif text-xl font-light leading-relaxed text-ink-soft sm:text-2xl">
-            Mándame un DM a{" "}
-            <span className="text-ink">@psicoisi</span> con la palabra{" "}
-            <span className="rounded-md bg-terracotta/10 px-2 py-1 font-mono text-base text-terracotta sm:text-lg">
-              {SITE.primaryCTA.keyword}
-            </span>
-            . Te contesto al toque con los detalles del próximo encuentro y
-            cómo reservar tu cupo.
+            Toda la info del próximo encuentro, fotos de los talleres, fechas
+            y cómo sumarte — la subimos a Instagram.{" "}
+            <span className="text-ink">Síguenos</span> y escríbenos por DM
+            cuando quieras.
           </p>
         </Reveal>
 
         <Reveal delay={300}>
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
             <Button href={url} size="lg" target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-5 w-5" strokeWidth={1.5} />
+              <Instagram className="h-5 w-5" strokeWidth={1.5} />
               {contact.getCallToActionText()}
               <ArrowUpRight
                 className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -62,10 +56,10 @@ export function Contacto() {
 
         <Reveal delay={400}>
           <p className="mt-12 max-w-prose text-sm leading-relaxed text-ink-mute">
-            La palabra <span className="font-medium text-ink-soft">HORA</span>{" "}
-            activa una respuesta automática con toda la info. Si tenés
-            preguntas más personales, podés escribirme directo en el DM —
-            {SITE.owner.name.toLowerCase()} te lee personalmente.
+            {SITE.owner.name} lee los mensajes personalmente. Si tenés
+            preguntas sobre el próximo taller, ubicación, o quieres proponer
+            un encuentro, escríbele directo al DM de{" "}
+            <span className="text-ink-soft">@psicoisi</span>.
           </p>
         </Reveal>
       </Container>

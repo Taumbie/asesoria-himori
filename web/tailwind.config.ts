@@ -29,6 +29,14 @@ const config: Config = {
           soft: "#5A4A43",
           mute: "#8A7A72",
         },
+        // Café — tono cálido marrón, para barritas de info / eventos
+        coffee: {
+          DEFAULT: "#6B4423",
+          dark: "#3E2818",
+          light: "#8B5A2B",
+          soft: "#A87C5F",
+        },
+
         // Reglas / bordes sutiles
         rule: "#D9C9BE",
       },

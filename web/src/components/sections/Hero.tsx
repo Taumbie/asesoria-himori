@@ -54,9 +54,16 @@ export function Hero() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
           {/* ── Columna texto ─────────────────────────────── */}
           <div className="flex flex-col justify-center lg:col-span-7 lg:pr-8">
-            <span className="eyebrow mb-6 inline-block">
-              Próximo encuentro · Concepción
-            </span>
+            <div className="mb-6 inline-flex max-w-full items-center gap-3 self-start rounded-2xl border border-coffee/30 bg-coffee/10 px-4 py-2.5 backdrop-blur-sm sm:px-5">
+              <span className="relative flex h-2 w-2 flex-shrink-0">
+                <span className="absolute inset-0 animate-ping rounded-full bg-coffee/60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-coffee" />
+              </span>
+              <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-coffee-dark sm:text-[11px] sm:tracking-eyebrow">
+                {SITE.upcoming[0].date} · {SITE.upcoming[0].time} ·
+                Tallercita, Caupolicán 346
+              </span>
+            </div>
 
             <h1 className="font-serif text-5xl font-medium leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl">
               Un espacio para{" "}
@@ -67,9 +74,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl font-serif text-xl font-light leading-relaxed text-ink-soft sm:text-2xl">
-              Talleres pequeños de journaling y scrapbook para mujeres que
-              quieren una tarde para sí mismas — sin prisa, sin consejos no
-              pedidos, sin roles.
+              Talleres pequeños de journaling y scrapbook en Concepción para
+              mujeres que quieren una tarde para sí mismas — sin prisa, sin
+              consejos no pedidos, sin roles.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">

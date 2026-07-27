@@ -8,14 +8,14 @@ export const SITE = {
   description:
     "Un espacio seguro y accesible para reencontrarte contigo a través del journaling y la escritura, en compañía de otras mujeres.",
 
-  // CTA principal — apunta a ManyChat / Instagram DM
-  // ManyChat se activa cuando alguien envía la palabra "HORA" al @psicoisi
-  // y devuelve automáticamente la info del próximo encuentro.
+  // CTA principal — la conversión vive en Instagram. La landing
+  // NO abre WhatsApp ni pide una keyword (sin ManyChat por ahora).
+  // El usuario va al perfil de @psicoisi, sigue, y desde ahí ve los
+  // próximos talleres y le escribe por DM.
   primaryCTA: {
-    label: "Reservar mi cupo",
-    keyword: "HORA",
+    label: "Seguir a @psicoisi",
     instruction:
-      "Mándame un DM a @psicoisi con la palabra HORA y te cuento cómo sumarte al próximo encuentro.",
+      "Síguenos en @psicoisi para ver los próximos encuentros y escribirle directo a Isi.",
     instagramUrl: "https://www.instagram.com/psicoisi/",
   },
 
@@ -26,14 +26,18 @@ export const SITE = {
     role: "Psicóloga",
   },
 
-  // Próximos encuentros (placeholder — Isidora actualiza este array)
+  // Próximos encuentros. Isidora edita este array.
+  // isoDate se usa para el JSON-LD Event (Google muestra fecha/hora reales).
   upcoming: [
     {
       title: "Mi jardín de invierno",
       subtitle: "Encuentro de journaling",
-      date: "Sábado por confirmar",
-      location: "Tempora Café, Concepción",
-      spots: "Cupos limitados",
+      date: "Domingo 2 de agosto",
+      time: "15:00 hrs",
+      fullDate: "Domingo 2 de agosto, 15:00 hrs",
+      isoDate: "2026-08-02T15:00:00-04:00",
+      location: "Tallercita, Caupolicán 346, Concepción",
+      spots: "Cupos limitados (6-8 mujeres)",
     },
   ],
 
