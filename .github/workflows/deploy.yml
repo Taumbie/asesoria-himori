@@ -42,10 +42,13 @@ jobs:
         working-directory: web
         run: npm ci
 
-      - name: Build (optimiza imágenes + comprime video + next build)
+      - name: Build
         working-directory: web
         env:
           NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io', github.repository_owner) }}/${{ github.event.repository.name }}
+        # Solo `next build` — los assets optimizados (imágenes WebP, video MP4/WebM,
+        # OG image) ya están commiteados en web/public/. Para regenerarlos desde
+        # los originales, correr localmente: `npm run assets:regenerate`
         run: npm run build
 
       - name: Setup Pages

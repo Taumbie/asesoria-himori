@@ -9,7 +9,7 @@
     "lint": "eslint",
     "optimize:images": "node scripts/optimize-images.mjs",
     "compress:video": "node scripts/compress-video.mjs",
-    "prebuild": "node scripts/optimize-images.mjs && node scripts/compress-video.mjs"
+    "assets:regenerate": "node scripts/optimize-images.mjs && node scripts/compress-video.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
