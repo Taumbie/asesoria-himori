@@ -6,7 +6,7 @@ export const SITE = {
   name: "Himori",
   tagline: "Talleres de journaling y crecimiento personal",
   description:
-    "Un espacio seguro y accesible para reencontrarte contigo a través del journaling y la escritura, en compañía de otras mujeres.",
+    "Un espacio seguro y accesible para reencontrarte a través del journaling y la escritura, en compañía de otras personas.",
 
   // CTA principal — la conversión vive en Instagram. La landing
   // NO abre WhatsApp ni pide una keyword (sin ManyChat por ahora).
@@ -37,7 +37,7 @@ export const SITE = {
       fullDate: "Domingo 2 de agosto, 15:00 hrs",
       isoDate: "2026-08-02T15:00:00-04:00",
       location: "Tallercita, Caupolicán 346, Concepción",
-      spots: "Cupos limitados (6-8 mujeres)",
+      spots: "Cupos limitados (6-8 personas)",
     },
   ],
 
@@ -46,7 +46,7 @@ export const SITE = {
     {
       title: "Un espacio íntimo",
       description:
-        "Grupos pequeños (6-8 mujeres) para que cada una pueda habitar el momento con calma, sin apuro.",
+        "Grupos pequeños (6-8 personas) para que cada una pueda habitar el momento con calma, sin apuro.",
     },
     {
       title: "Materiales listos",
@@ -77,10 +77,10 @@ export const SITE = {
 
   // Para quién es — el perfil core del modelo de negocio
   audience: [
-    "Mujeres que sienten que llevan mucho tiempo pensando y poco tiempo sintiendo.",
+    "Personas que sienten que llevan mucho tiempo pensando y poco tiempo sintiendo.",
     "Personas que quieren un espacio sin juicios, sin consejos no pedidos, sin prisa.",
     "Curiosas del journaling, el scrapbook, la escritura creativa — incluso si nunca lo intentaron.",
-    "Las que necesitan una tarde entera para sí mismas, sin roles, sin tareas.",
+    "Las que necesitan un espacio para sí mismas, sin roles, sin tareas.",
   ],
 } as const;
 

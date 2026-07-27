@@ -40,7 +40,7 @@ export function Galeria() {
           </Reveal>
           <Reveal delay={100}>
             <h2 className="mt-6 font-serif text-4xl font-medium leading-[1.1] tracking-tight text-ink sm:text-5xl">
-              Lo que pasa cuando ocho mujeres se sientan a la misma mesa.
+              Lo que pasa cuando ocho personas se sientan a la misma mesa.
             </h2>
           </Reveal>
         </div>

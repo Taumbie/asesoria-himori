@@ -69,13 +69,13 @@ export function Hero() {
               Un espacio para{" "}
               <em className="font-normal italic text-terracotta">
                 reencontrarte
-              </em>{" "}
-              contigo, página a página.
+              </em>
+              , página a página.
             </h1>
 
             <p className="mt-6 max-w-xl font-serif text-xl font-light leading-relaxed text-ink-soft sm:text-2xl">
               Talleres pequeños de journaling y scrapbook en Concepción para
-              mujeres que quieren una tarde para sí mismas — sin prisa, sin
+              personas que quieren un espacio para sí mismas — sin prisa, sin
               consejos no pedidos, sin roles.
             </p>
 
@@ -101,7 +101,7 @@ export function Hero() {
 
             <div className="mt-10 flex items-center gap-3 text-xs uppercase tracking-eyebrow text-ink-mute">
               <Play className="h-3 w-3" strokeWidth={2} />
-              <span>Video del último taller</span>
+              <span>Experiencia del último taller</span>
             </div>
           </div>
 

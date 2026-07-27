@@ -35,15 +35,16 @@ export const metadata: Metadata = {
     template: "%s · Himori",
   },
   description:
-    "Un espacio seguro y accesible para reencontrarte contigo a través del journaling y la escritura, en compañía de otras mujeres. Talleres presenciales en Concepción, Chile.",
+    "Taller de journaling y scrapbook en Concepción, Chile. Encuentros presenciales para personas que quieren un espacio para reconectar con ellas mismas a través de la escritura.",
   keywords: [
     "taller journaling Chile",
     "taller journaling Concepción",
-    "journaling mujeres",
-    "scrapbook taller",
-    "crecimiento personal mujeres",
+    "taller scrapbook Concepción",
+    "journaling",
     "escritura terapéutica",
+    "crecimiento personal",
     "psicología journaling",
+    "scrapbook taller",
   ],
   authors: [{ name: "Isidora García" }],
   creator: "Isidora García — @psicoisi",
@@ -104,7 +105,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Himori",
               description:
-                "Talleres presenciales de journaling y crecimiento personal para mujeres en Concepción, Chile.",
+                "Talleres presenciales de journaling y crecimiento personal en Concepción, Chile.",
               url: SITE_URL,
               image: assetUrl("/og-image.png"),
               sameAs: [INSTAGRAM],
@@ -157,7 +158,7 @@ export default function RootLayout({
                 validFrom: new Date().toISOString().split("T")[0],
               },
               description:
-                "Encuentro presencial de journaling y scrapbook en Concepción. Grupo pequeño (6-8 mujeres), materiales incluidos, café de bienvenida.",
+                "Encuentro presencial de journaling y scrapbook en Concepción. Grupo pequeño (6-8 personas), materiales incluidos, café de bienvenida.",
             }),
           }}
         />

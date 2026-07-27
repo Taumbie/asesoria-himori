@@ -26,9 +26,8 @@ export function Manifiesto() {
         <Reveal delay={200}>
           <p className="mt-10 font-serif text-xl font-light leading-relaxed text-ink-soft sm:text-2xl">
             No es un taller de productividad. No es un curso de creatividad.
-            Es una tarde entera para ti — con una libreta abierta, unas
-            tijeras, stickers de más, y otras mujeres que entienden por qué
-            vinieron.
+            Es un espacio para ti — con una libreta abierta, unas tijeras,
+            stickers de más, y otras personas que entienden por qué vinieron.
           </p>
         </Reveal>
 

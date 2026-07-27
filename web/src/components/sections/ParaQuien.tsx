@@ -17,15 +17,8 @@ export function ParaQuien() {
             </Reveal>
             <Reveal delay={100}>
               <h2 className="mt-6 font-serif text-4xl font-medium leading-[1.1] tracking-tight text-ink sm:text-5xl">
-                Si te reconocieras en alguna de estas, es para ti.
+                Si te reconoces en alguno de estos puntos, es para ti.
               </h2>
-            </Reveal>
-            <Reveal delay={200}>
-              <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft">
-                No necesitas experiencia. No necesitas saber dibujar ni
-                escribir bonito. Solo necesitas ganas de pasar una tarde
-                distinta.
-              </p>
             </Reveal>
           </div>
 
