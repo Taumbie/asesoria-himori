@@ -22,7 +22,7 @@ export function Contacto() {
     >
       <Container size="narrow">
         <Reveal>
-          <span className="eyebrow">¿Te sumás?</span>
+          <span className="eyebrow">¿Te sumas?</span>
         </Reveal>
 
         <Reveal delay={100}>
@@ -56,7 +56,7 @@ export function Contacto() {
 
         <Reveal delay={400}>
           <p className="mt-12 max-w-prose text-sm leading-relaxed text-ink-mute">
-            {SITE.owner.name} lee los mensajes personalmente. Si tenés
+            {SITE.owner.name} lee los mensajes personalmente. Si tienes
             preguntas sobre el próximo taller, ubicación, o quieres proponer
             un encuentro, escríbele directo al DM de{" "}
             <span className="text-ink-soft">@psicoisi</span>.

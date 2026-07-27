@@ -64,7 +64,7 @@ export function Hero() {
 
             <p className="mt-6 max-w-xl font-serif text-xl font-light leading-relaxed text-ink-soft sm:text-2xl">
               Talleres pequeños de journaling y scrapbook en Concepción para
-              personas que quieren un espacio para sí mismas — sin prisa, sin
+              personas que quieren un espacio para sí — sin prisa, sin
               opiniones no requeridas, sin roles.
             </p>
 

@@ -66,12 +66,12 @@ export const SITE = {
     {
       title: "Compartir sin presión",
       description:
-        "Si querés contar, hay espacio. Si no, está bien quedarse contigo.",
+        "Si quieres contar, hay espacio. Si no, está bien quedarse contigo.",
     },
     {
       title: "Te llevás un recuerdo",
       description:
-        "La página que armaste es tuya. Hecha por ti, con tus manos, en una tarde.",
+        "La página que armaste es tuya, hecha por tus manos, en una tarde de bien acompañada.",
     },
   ],
 
@@ -79,8 +79,8 @@ export const SITE = {
   audience: [
     "Personas que llevan mucho tiempo pensando y poco sintiendo.",
     "Personas que quieren un espacio sin juicios, sin opiniones no requeridas, sin prisa.",
-    "Curiosas del journaling, el scrapbook, la escritura creativa — incluso si nunca lo intentaron.",
-    "Aquellos que necesitan un espacio para sí mismos, sin roles, sin tareas.",
+    "Personas curiosas del journaling, el scrapbook, la escritura creativa — incluso si nunca lo intentaron.",
+    "Aquellos que necesitan un espacio para sí, sin roles, sin tareas.",
   ],
 } as const;
 

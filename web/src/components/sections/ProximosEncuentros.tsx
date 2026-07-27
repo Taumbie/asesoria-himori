@@ -17,7 +17,7 @@ export function ProximosEncuentros() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <Reveal>
-              <span className="eyebrow text-cream/80">Próximo encuentro</span>
+              <span className="eyebrow text-cream/80">El próximo</span>
             </Reveal>
             <Reveal delay={100}>
               <h2 className="mt-6 font-serif text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl">

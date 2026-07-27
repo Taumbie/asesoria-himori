@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s · Himori",
   },
   description:
-    "Taller de journaling y scrapbook en Concepción, Chile. Encuentros presenciales para personas que quieren un espacio para reconectar con ellas mismas a través de la escritura.",
+    "Taller de journaling y scrapbook en Concepción, Chile. Encuentros presenciales para personas que quieren un espacio para reconectar a través de la escritura.",
   keywords: [
     "taller journaling Chile",
     "taller journaling Concepción",
