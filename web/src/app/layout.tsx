@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       "Un espacio seguro para reencontrarte a través del journaling y la escritura.",
     images: [
       {
-        url: "/og-image.png",
+        url: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Himori — Talleres de journaling",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Himori — Talleres de journaling",
     description: "Encuentros presenciales de journaling y crecimiento personal.",
-    images: ["/og-image.png"],
+    images: [`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/og-image.png`],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: SITE_URL },
@@ -100,7 +100,9 @@ export default function RootLayout({
               description:
                 "Talleres presenciales de journaling y crecimiento personal para mujeres.",
               url: SITE_URL,
-              image: `${SITE_URL}/og-image.png`,
+              image: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/og-image.png`.startsWith("http")
+                ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/og-image.png`
+                : `${SITE_URL}${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/og-image.png`,
               sameAs: [INSTAGRAM],
               address: {
                 "@type": "PostalAddress",

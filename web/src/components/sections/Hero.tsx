@@ -13,6 +13,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ArrowUpRight, Play } from "lucide-react";
 import { SITE } from "@/content/site";
+import { assetPath } from "@/lib/asset";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -109,15 +110,15 @@ export function Hero() {
                   loop
                   playsInline
                   preload="none"
-                  poster="/video/hero-poster.jpg"
+                  poster={assetPath("/video/hero-poster.jpg")}
                   aria-label="Video del último taller de journaling Himori"
                 >
-                  <source src="/video/hero.webm" type="video/webm" />
-                  <source src="/video/hero.mp4" type="video/mp4" />
+                  <source src={assetPath("/video/hero.webm")} type="video/webm" />
+                  <source src={assetPath("/video/hero.mp4")} type="video/mp4" />
                 </video>
               ) : (
                 <img
-                  src="/video/hero-poster.jpg"
+                  src={assetPath("/video/hero-poster.jpg")}
                   alt="Frame del último taller de journaling"
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="eager"

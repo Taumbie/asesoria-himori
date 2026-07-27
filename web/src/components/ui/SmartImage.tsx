@@ -4,6 +4,7 @@
 // Mantenemos <img> en vez de next/image para evitar el adapter.
 
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 interface SmartImageProps {
   base: string; // ej: "taller-01" (sin extensión)
@@ -31,8 +32,12 @@ export function SmartImage({
 }: SmartImageProps) {
   return (
     <img
-      src={`/images/${base}-md.webp`}
-      srcSet={`/images/${base}-sm.webp 480w, /images/${base}-md.webp 768w, /images/${base}-lg.webp 1200w`}
+      src={assetPath(`/images/${base}-md.webp`)}
+      srcSet={[
+        assetPath(`/images/${base}-sm.webp 480w`),
+        assetPath(`/images/${base}-md.webp 768w`),
+        assetPath(`/images/${base}-lg.webp 1200w`),
+      ].join(", ")}
       sizes={sizes}
       alt={alt}
       width={width}

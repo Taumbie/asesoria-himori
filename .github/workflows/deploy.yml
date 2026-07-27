@@ -46,6 +46,7 @@ jobs:
         working-directory: web
         env:
           NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io', github.repository_owner) }}/${{ github.event.repository.name }}
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         # Solo `next build` — los assets optimizados (imágenes WebP, video MP4/WebM,
         # OG image) ya están commiteados en web/public/. Para regenerarlos desde
         # los originales, correr localmente: `npm run assets:regenerate`
