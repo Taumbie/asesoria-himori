@@ -1,0 +1,40 @@
+# .gitignore — raíz del repo asesoria-himori
+
+# Archivos fuente de Isidora (no se commitean)
+WhatsApp Image *.jpeg
+WhatsApp Video *.mp4
+
+# Plan de negocio (PDF source y output)
+index.html
+build-pdf.js
+pdf-to-png.js
+preview.js
+preview/
+Himori-Plan-de-Negocio.pdf
+
+# Build del landing
+web/.next/
+web/out/
+web/node_modules/
+web/next-env.d.ts
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Env
+.env
+.env.local
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
