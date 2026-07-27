@@ -65,7 +65,7 @@ export function Hero() {
             <p className="mt-6 max-w-xl font-serif text-xl font-light leading-relaxed text-ink-soft sm:text-2xl">
               Talleres pequeños de journaling y scrapbook en Concepción para
               personas que quieren un espacio para sí mismas — sin prisa, sin
-              consejos no pedidos, sin roles.
+              opiniones no requeridas, sin roles.
             </p>
 
             <div className="mt-8 inline-flex max-w-full items-center gap-3 self-start rounded-2xl border border-coffee/30 bg-coffee/10 px-4 py-2.5 backdrop-blur-sm sm:mt-10 sm:px-5">

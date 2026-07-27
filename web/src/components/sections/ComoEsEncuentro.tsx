@@ -21,7 +21,7 @@ export function ComoEsEncuentro() {
           <Reveal delay={200}>
             <p className="mt-6 text-lg leading-relaxed text-ink-soft">
               Cada encuentro sigue un ritmo parecido, pero lo que sale en la
-              página es siempre distinto. Aquí va lo que podés esperar.
+              página siempre es distinto. Aquí va lo que podés esperar.
             </p>
           </Reveal>
         </div>

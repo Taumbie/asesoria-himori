@@ -44,19 +44,19 @@ export const SITE = {
   // Cómo es un encuentro — bullets
   meetingFormat: [
     {
-      title: "Un espacio íntimo",
+      title: "En comodidad",
       description:
-        "Grupos pequeños (6-8 personas) para que cada una pueda habitar el momento con calma, sin apuro.",
+        "Grupos pequeños (6-8 personas) donde puedes estar cómoda y bajar la guardia, sin apuro.",
     },
     {
       title: "Materiales listos",
       description:
-        "Llevamos todo: libretas, stickers, washi, recortes, tijeras. Solo vienes tú.",
+        "Tenemos todo listo. Solo tienes que traer tu libreta.",
     },
     {
-      title: "Café de bienvenida",
+      title: "Café o té de bienvenida",
       description:
-        "Llegamos, charlamos, y nos instalamos. El ambiente importa tanto como el trabajo.",
+        "Te esperamos con algo caliente. Charlamos, nos instalamos, y el ambiente importa tanto como el trabajo.",
     },
     {
       title: "Una hora para crear",
@@ -78,9 +78,9 @@ export const SITE = {
   // Para quién es — el perfil core del modelo de negocio
   audience: [
     "Personas que llevan mucho tiempo pensando y poco sintiendo.",
-    "Personas que quieren un espacio sin juicios, sin consejos no pedidos, sin prisa.",
+    "Personas que quieren un espacio sin juicios, sin opiniones no requeridas, sin prisa.",
     "Curiosas del journaling, el scrapbook, la escritura creativa — incluso si nunca lo intentaron.",
-    "Las que necesitan un espacio para sí mismas, sin roles, sin tareas.",
+    "Aquellos que necesitan un espacio para sí mismos, sin roles, sin tareas.",
   ],
 } as const;
 
