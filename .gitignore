@@ -18,6 +18,9 @@ web/out/
 web/node_modules/
 web/next-env.d.ts
 
+# Deps viven en web/package.json — no instalar nunca desde la raíz
+package-lock.json
+
 # Sistema
 .DS_Store
 Thumbs.db

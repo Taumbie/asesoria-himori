@@ -1,17 +1,18 @@
 # Himori — Landing
 
 Landing page de Himori (talleres de journaling y crecimiento personal).
-Next.js 16 (App Router) + TypeScript strict + Tailwind v3, exportado a HTML estático y deployado a GitHub Pages.
+Next.js 16 (App Router) + TypeScript strict + Tailwind v3, deployado a **Vercel**.
 
 ## Stack
 
-- **Framework**: Next.js 16 con `output: "export"` (HTML estático)
+- **Framework**: Next.js 16 (App Router, server actions, RSC)
 - **Lenguaje**: TypeScript strict
 - **Estilos**: Tailwind CSS v3 (paleta Himori en `tailwind.config.ts`)
 - **Tipografía**: Fraunces (serif) + Inter (sans) vía `next/font`
 - **Animaciones**: IntersectionObserver nativo (sin Framer Motion en producción)
 - **Compresión video**: `ffmpeg` estático vía `@ffmpeg-installer/ffmpeg`
 - **Optimización imágenes**: `sharp` → WebP responsive (sm/md/lg)
+- **Auth + DB + Storage**: Supabase (proyecto separado de GesThor)
 
 ## Estructura
 
@@ -42,9 +43,7 @@ web/
 ├── scripts/
 │   ├── optimize-images.mjs   # sharp → WebP responsive
 │   └── compress-video.mjs    # ffmpeg → MP4 + WebM + poster
-└── .github/
-    └── workflows/
-        └── deploy.yml        # Auto-deploy a GitHub Pages
+└── .env.example              # Template de variables de entorno
 ```
 
 ## Comandos
@@ -60,12 +59,19 @@ npm run dev                    # http://localhost:3000
 npm run optimize:images
 npm run compress:video
 
-# Build de producción (corre optimize:images + compress:video automáticamente)
-npm run build                  # output en web/out/
+# Build de producción
+npm run build
 
-# Previsualizar el build estático (requiere npx serve)
-npx serve out -l 3001          # http://localhost:3001/asesoria-himori/
+# Iniciar en modo producción local
+npm start
 ```
+
+## Variables de entorno
+
+Copia `.env.example` a `.env.local` para desarrollo. Las mismas vars se
+configuran en Vercel (Project Settings → Environment Variables).
+
+Ver `.env.example` para la lista completa.
 
 ## Cómo actualizar contenido
 
@@ -92,43 +98,9 @@ Graph API para abrir DM directo, WhatsApp Business, etc.), se reemplaza el
 archivo `contactInstagram.service.ts` y los consumidores no se enteran — la
 interfaz está en `src/services/interfaces.ts`.
 
-## Setup inicial en GitHub
+## Deploy
 
-1. **Crear repo `asesoria-himori`** en GitHub
-2. **Push del código**:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: landing Himori v1"
-   git branch -M main
-   git remote add origin git@github.com:<username>/asesoria-himori.git
-   git push -u origin main
-   ```
-3. **Activar Pages**: Settings → Pages → Source: **GitHub Actions**
-4. **Esperar el primer deploy** (1-2 min) y obtener la URL:
-   `https://<username>.github.io/asesoria-himori/`
-
-### Opcional: variable de entorno para SITE_URL
-
-Si Isidora tiene un dominio custom (`himori.cl`) antes del deploy, en
-Settings → Secrets and variables → Actions → Variables, agregar:
-
-- `SITE_URL` = `https://himori.cl`
-
-Si no, el workflow usa `https://<username>.github.io/asesoria-himori/` por
-defecto.
-
-## Migración futura a Vercel
-
-Cuando llegue el momento, los cambios son:
-
-1. **`next.config.ts`**: borrar `output: "export"`, `basePath`, `trailingSlash`
-   y `images.unoptimized`
-2. **`web/.github/workflows/deploy.yml`**: ya no es necesario (Vercel
-   auto-detecta Next.js)
-3. **Conectar el repo a Vercel** desde la UI
-
-Tiempo estimado: 5 minutos.
+Push a `main` → Vercel compila y publica automáticamente.
 
 ## Performance
 

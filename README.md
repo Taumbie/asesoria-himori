@@ -1,19 +1,21 @@
 # asesoria-himori
 
 Landing page para Himori (talleres de journaling y crecimiento personal) +
-plan de negocio estratégico en PDF.
+plan de negocio estratégico en PDF + panel admin para Isi.
 
 ## Estructura
 
 ```
 .
-├── web/                  → Next.js 16 landing (ver web/README.md)
+├── web/                  → Next.js 16 (App Router, Vercel)
 │   ├── src/
 │   ├── public/
 │   ├── scripts/
-│   └── .github/          (vacío — workflows viven en la raíz)
+│   ├── db/               → Schema y migraciones (F1+)
+│   └── .env.example      → Template de variables de entorno
 │
-├── .github/workflows/    → Deploy automático a GitHub Pages
+├── db/                   → Schema de Supabase (versionado)
+├── docs/                 → Plan del panel Isi + checklists
 ├── index.html            → Plan de negocio en PDF (A4)
 ├── build-pdf.js          → Renderiza index.html → PDF
 ├── pdf-to-png.js         → Convierte PDF → PNG para preview
@@ -35,9 +37,18 @@ Para más detalles del landing, ver [`web/README.md`](./web/README.md).
 
 ## Deploy
 
-Push a `main` → GitHub Actions compila y publica en Pages.
+Push a `main` → **Vercel** compila y publica automáticamente.
 
-URL final: `https://<owner>.github.io/asesoria-himori/`
+URL final: `https://asesoria-himori.vercel.app` (o dominio custom).
+
+Variables de entorno requeridas: ver `web/.env.example`.
+
+## Backend
+
+**Supabase** (mismo correo que GesThor, proyecto separado):
+- Auth: Google OAuth (solo Isi)
+- DB: Postgres con `workshops` y `photos` (schema en `db/schema.sql`)
+- Storage: bucket `workshop-photos` (público)
 
 ## Plan de negocio
 
@@ -48,3 +59,13 @@ node build-pdf.js
 ```
 
 Output: `Himori-Plan-de-Negocio.pdf`.
+
+## Roadmap
+
+Ver [`docs/PLAN-panel-isi.md`](./docs/PLAN-panel-isi.md) para el plan completo del panel de Isi.
+
+- [x] **F1** — Cimientos: Vercel + Supabase conectados, schema migrado
+- [ ] **F2** — Auth + shell `/admin`
+- [ ] **F3** — CRUD privado (talleres + fotos)
+- [ ] **F4** — Galería pública dinámica
+- [ ] **F5** — Pulido (seed, OG images, último taller destacado)
